@@ -6,9 +6,12 @@
   <title>My first script</title>
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root">
+    <p id="p-text">This is some text to change.</p>
+  </div>
   <script>
-      alert("My name is Nikki.");
+      var bigChange = document.getElementById("p-text");
+      bigChange.innerHTML = "Change the text to this.";
   </script>
 </body>
 </html>
