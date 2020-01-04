@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 2</title>
+
+</head>
+<body>
+  <div id="root">
+      <h1 id="pageTitle">Your url is:</h1>
+      <h2 id="urlSpace"></h2>
+  </div>
+  <script>
+    var userInput = prompt("Please enter a url.");
+    var url = userInput.toLowerCase();
+    console.log(url);
+
+    if (url.substring(0, 4) != "http") {
+      url = "https://" + url
+    };
+
+    var urlSpace = document.getElementById("urlSpace");
+    var HTMLLink = "<a href='" + url + "'>" + url + "</a>"
+    urlSpace.innerHTML = HTMLLink
+
+  </script>
+</body>
+</html>
