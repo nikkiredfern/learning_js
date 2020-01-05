@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Project 3</title>
+</head>
+<body>
+  <div id="root">
+    <p id="para">You're the perfect age to be a parent.</p>
+  </div>
+  <script>
+      var bestAge = prompt("How old where you when you had your first child?");
+      bestAge = Number(bestAge);
+      var para = document.getElementById('para');
+
+      if (bestAge <= 17) {
+        para.innerHTML = "You should probably talk to your parents about this!"
+      } else if (bestAge >= 27) {
+        para.innerHTML = "Wow, you're way too old to be a parent!"
+      };
+
+  </script>
+</body>
+</html>
