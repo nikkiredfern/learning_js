@@ -7,10 +7,30 @@
 </head>
 <body>
   <div id="root">
-
+    <h1 id="output">The amount you need to tip is:</h1>
   </div>
   <script>
-    
+
+    function $(id) {
+      return document.getElementById(id)
+    };
+
+    var a = Number(prompt("Please enter the bill total."));
+    var b = Number(prompt("Please enter the amount you wish to tip.", 15));
+
+    function tipCalculator(a, b = 15) {
+      if (typeof(x) === "number" && typeof(y) === "number") {
+        return (a /100) * b
+      } else {
+        alert("One of these isn't a number. Please reload the page and try again.")
+      };
+    };
+
+    var output = $("output");
+    var tipTotal = tipCalculator(a, b);
+    output.innerHTML = "The amount you need to tip is: " + tipTotal;
+
+    //tipPercentage needs to have a default value.
   </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions Practice</title>
+</head>
+<body>
+  <div id="root">
+    <h1 id="heading">The result of these two numbers being multiplied is:</h1>
+  </div>
+  <script>
+    var x = Number(prompt("Please enter a number."));
+    var y = Number(prompt("Please enter another number."));
+
+    function $(id) {
+      return document.getElementById(id)
+    };
+
+    function doMath(x, y) {
+      if (typeof(x) === "number" && typeof(y) === "number") {
+        return x * y
+      } else {
+        alert("One of these isn't a number. Please reload the page and try again.")
+      };
+    };
+
+    var answer = doMath(x, y);
+    var heading = $("heading");
+    heading.innerHTML = "The result of these two numbers being multiplied is: " + answer;
+
+  </script>
+</body>
+</html>
