@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Query Selectors</title>
+</head>
+<body>
+  <div id="root">
+    <h1 id="output">Can we change this. </h1>
+    <input type="text" style="padding: 30px; font-size: 30px;" class="textInput" value="type something here">
+  </div>
+  <script>
+
+    function $(sel) {
+      return document.querySelector(sel)
+    };
+
+    var output = $("#output");
+    output.innerHTML = "This has now been changed";
+
+    var textInput = $(".textInput");
+    output.innerHTML = textInput.value;
+
+  </script>
+</body>
+</html>

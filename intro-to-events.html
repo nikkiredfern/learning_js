@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro to Events</title>
+</head>
+<body>
+  <div id="root">
+    <h1 id="output">Add 10,000 to any number. Just enter it below.</h1>
+    <input type="number"
+    style="padding: 20px;
+    border: 1px solid green;
+    border-radius: 30px;
+    color: green;
+    font-size: 22px;"
+    id="num-box" value="99">
+    <button type="button"
+    style="padding: 20px;
+    border: 1px solid green;
+    border-radius: 30px;
+    color: green;
+    font-size: 22px;
+    background-color: white; "
+    class="bigButton"
+    onClick="clickMe()">Press here</button>
+  </div>
+  <script>
+
+    function $(sel) {
+      return document.querySelector(sel)
+    };
+
+
+    var output = $("#output");
+    output.innerHTML = "The number you entered, plus 10,000 is: " + ;
+
+
+
+  </script>
+</body>
+</html>
