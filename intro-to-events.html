@@ -23,7 +23,7 @@
     font-size: 22px;
     background-color: white; "
     class="bigButton"
-    onClick="clickMe()">Press here</button>
+    onClick="clickMe()">Press for result</button>
   </div>
   <script>
 
@@ -31,9 +31,17 @@
       return document.querySelector(sel)
     };
 
-
+    var numBox = Math.floor($("#num-box").value)
+    var outputResult = 0;
     var output = $("#output");
-    output.innerHTML = "The number you entered, plus 10,000 is: " + ;
+
+    function clickMe(numBox) {
+        outputResult = numBox + Number(10000);
+        output.innerHTML = "The number you entered, plus 10,000 is: " + outputResult;
+    };
+
+    //var output = $("#output");
+    //output.innerHTML = "The number you entered, plus 10,000 is: " + outputResult;
 
 
 
