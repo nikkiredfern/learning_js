@@ -69,11 +69,11 @@
     };
 
     function calculate() {
-      var billAmount = $("bill-amount").value;
-      var tipAmount = $("tip-amount").value;
+      var billAmount = Math.floor($("#bill-amount").value);
+      var tipAmount = Math.floor($("#tip-amount").value);
       var amountToTip = (billAmount / 100) * tipAmount;
-      var resultText = $("result-text");
-      resultText.innerHTML = "The amount of tip you should leave is: " + amountToTip;
+      var resultText = $("#result-text");
+      resultText.innerHTML = "The amount of tip you should leave is: $" + amountToTip;
     }
 
   </script>
