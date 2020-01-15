@@ -22,35 +22,26 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
   crossorigin="anonymous"></script>
-  <title>Objects, For Loops & forEach</title>
+  <title>Guessing game</title>
+  <link rel = "stylesheet" type = "text/css" href = "style.css" />
 </head>
 <body>
-
-  <script>
-    function $(sel) {
-      return document.querySelector(sel)
-    };
-
-  var nikki = {
-    'name': 'Nikki',
-    'age': 36,
-    'location': 'Gold Coast'
-  };
-
-  var nikkiArray = ["Nikki", 36, "Gold Coast"];
-
-  //for (var i = 0; i < nikkiArray.length; i++) {
-    //console.log(nikkiArray[i])
-  //};
-
-  nikkiArray.forEach(function(node, index) {
-    console.log(node)
-  });
-
-  //console.log(nikki.name);
-  //console.log(nikki.age);
-  //console.log(nikki['location']);
-
-  </script>
+  <div class="container" style="margin-top:30px;">
+    <h1>Guessing game</h1>
+    <p class="explain-text">Input a number below between 0 - 10 to take a guess. A hint will show up with each guess until the game starts again.</p>
+    <div class="row">
+      <div class="col" id="gen-text">Change the page background to:</div>
+      <div class="col"><input type="number" id="num-guess-input" value="9"></div>
+    </div>
+    <div class="row">
+      <button type="button" class="btn btn-outline-primary">Submit your guess</button>
+    </div>
+    <div class="row" id="hint">
+      <p>Hint: take a guess to get your first hint.</p>
+    </div>
+    <div class="row">
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

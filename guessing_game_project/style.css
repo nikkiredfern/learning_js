@@ -1,0 +1,54 @@
+h1 {
+  color: orange;
+  text-align: center;
+}
+
+p {
+  justify-content: center;
+  text-align: center;
+}
+
+#hint {
+  justify-content: center;
+}
+
+#num-guess-input {
+  border: 1px solid orange;
+  border-radius: 30px;
+  color: orange;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+#gen-text {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+body > div > div:nth-child(4) {
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.btn-outline-primary {
+  border: 1px solid orange;
+  border-radius: 30px !important;
+  color: orange;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.btn-outline-primary:hover {
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 30px !important;
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
