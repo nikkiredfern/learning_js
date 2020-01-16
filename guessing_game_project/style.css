@@ -1,3 +1,7 @@
+#guessing-game-question-mark {
+  justify-content: center;
+}
+
 h1 {
   color: orange;
   text-align: center;
@@ -9,6 +13,7 @@ p {
 }
 
 #hint {
+  font-weight: bold;
   justify-content: center;
 }
 
@@ -34,13 +39,16 @@ body > div > div:nth-child(4) {
   padding-top: 30px;
 }
 
+.row {
+  justify-content: center;
+}
+
 .btn-outline-primary {
   border: 1px solid orange;
   border-radius: 30px !important;
   color: orange;
-  margin: 5px;
-  padding: 5px;
-  text-align: center;
+  font-size: 30px;
+  justify-content: center;
 }
 
 .btn-outline-primary:hover {
@@ -51,4 +59,12 @@ body > div > div:nth-child(4) {
   margin: 5px;
   padding: 5px;
   text-align: center;
+}
+
+#button-row {
+  margin: 2em;
+}
+
+#design-assets {
+  font-size: 0.75em;
 }

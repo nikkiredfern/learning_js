@@ -27,19 +27,26 @@
 </head>
 <body>
   <div class="container" style="margin-top:30px;">
+    <div class="row" id="guessing-game-question-mark">
+      <img src="question-speech-bubble.png" alt="Guessing game question mark">
+    </div>
     <h1>Guessing game</h1>
     <p class="explain-text">Input a number below between 0 - 10 to take a guess. A hint will show up with each guess until the game starts again.</p>
     <div class="row">
-      <div class="col" id="gen-text">Change the page background to:</div>
+      <div class="col" id="gen-text">My guess is:</div>
       <div class="col"><input type="number" id="num-guess-input" value="9"></div>
     </div>
-    <div class="row">
-      <button type="button" class="btn btn-outline-primary">Submit your guess</button>
+    <div class="row" id="button-row">
+      <button type="button" class="btn btn-outline-primary" onclick="isItCorrect()">Submit your guess</button>
     </div>
     <div class="row" id="hint">
-      <p>Hint: take a guess to get your first hint.</p>
+      <p id="hint-text">Hint: take a guess to get your first hint.</p>
     </div>
-    <div class="row">
+    <div class="row" id="design-assets">
+      <a href="https://www.freepik.com/free-photos-vectors/business">Business vector created by freepik - www.freepik.com</a>
+    </div>
+    <div class="row" id="design-assets">
+      <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
     </div>
   </div>
   <script src="script.js"></script>

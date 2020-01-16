@@ -2,36 +2,18 @@ function $(sel) {
   return document.querySelector(sel);
 }
 
-var body = $("body");
-
 var randomNum = Math.round(Math.random() * 10);
-var userGuess = $("#num-guess-input");
-console.log(randomNum);
 
-if (randomNum === userGuess) {
+var guessingGameQuestionMark = $("#guessing-game-question-mark");
 
+function isItCorrect() {
+  var userGuess = Math.floor($("#num-guess-input").value);
+  if (randomNum > userGuess) {
+    $("#hint-text").innerText = "Hint: the number is higher than your guess.";
+  } else if (randomNum < userGuess) {
+    $("#hint-text").innerHTML = "Hint: the number is lower than your guess.";
+  } else if (randomNum === userGuess){
+    guessingGameQuestionMark.innerHTML = "<img src=\"winner.png\" alt=\"winner\">";
+    $("#hint-text").innerHTML = "YOU'VE WON!";
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-$("#background-color").addEventListener('keyup', function changeEverything(event) {
-  body.style.backgroundColor = event.target.value;
-});
-
-$("#text-color").addEventListener('keyup', function changeEverything(event) {
-  body.style.color = event.target.value;
-});
-
-$("#font-sizing").addEventListener('keyup', function changeEverything(event) {
-  body.style.fontSize = event.target.value;
-});
