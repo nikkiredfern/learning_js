@@ -1,0 +1,25 @@
+body {
+  height: 850px;
+}
+
+body > div {
+  height: 100%;
+}
+
+body > div > div {
+  height: 100%;
+}
+
+body > div > div > div {
+  height: 100%;
+}
+
+.modal {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
