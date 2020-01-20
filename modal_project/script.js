@@ -2,27 +2,29 @@
     return document.querySelector(sel);
   }
 
-  class Person {
-    constructor(name, age, food) {
-      this.name = name;
-      this.age = Number(age);
-      this.food = food;
-    }
-
-    yummyFood() {
-      console.log(this.name + " thinks " + this.food + " is yummy!");
-    }
+class Modal {
+  constructor() {
+    this.modal = $(".modal-js-modal");
   }
 
-  class Baby extends Person {
-    constructor(name, age, food) {
-      super(name, age, food);
-      this.babyName = "Henry";
-    }
+  open() {
+        this.modal.style.display = "initial";
   }
 
-  const nikki = new Baby("Nikki", 36, "chocolate");
-  console.log(nikki);
-  nikki.yummyFood();
-  const tom = new Person("Tom", 36, "chips");
-  tom.yummyFood();
+  close() {
+        this.modal.style.display = "none";
+  }
+}
+
+const modal = new Modal()
+const closeBtn = $(".js-close-modal")
+const openBtn =$(".js-open-modal")
+
+
+openBtn.addEventListener("click", function(event) {
+  modal.open();
+});
+
+closeBtn.addEventListener("click", function(event) {
+  modal.close();
+});
