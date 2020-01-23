@@ -1,0 +1,9 @@
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-family: 'Rock Salt', cursive;
+  font-size: 10em;
+  color: #fc46aa;
+}
