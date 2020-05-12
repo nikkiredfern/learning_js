@@ -22,9 +22,8 @@ function same(arrOne, arrTwo) {
     //Create a forLoop to loop through the array:
     for (i = 0; i <= arrOne.length; i++){
         if (arrOne[i] == Math.sqrt(arrTwo[i])) {
-          continue;
+          return true;
         }
-    return true;
     }
   }
   //Otherwise return false:
@@ -41,11 +40,47 @@ console.log(same([1, 2, 1], [4, 4, 1])); //false, must be same frequency
 - Is the problem looking for a Boolean or a string to be returned. The casing is lower inspect
 in the example, although commonsense says a Boolean rather than string.*/
 
+/*So with a bit more looking my solution above doesn't work. If arrOne[0] is the sq.rt of arrTwo[0]
+then it will automatically evaluate to true, regardless of whether arrOne[1] or over has the correct result.
+I didn't work this out until after I had seen the instructors solution which I've copied out below: */
 
-/*for (i = 0; i <= arrOne.length; i++) {
-  if (i != arrOne.length || arrTwo[i] != arrOne[i] ** 2) ? return False :
-//Check if the ith item in arrTwo is equal to the square of arrOne[i]:
-  if (arrTwo[i] != arrOne[i] ** 2) ? return False
-//Or return True
-: return True;
-}*/
+//The method:
+function same(arr1, arr2) {
+  //Check if the arrays are the same length, if not return false.
+  if(arr1.length !== arr2.length) {
+    return false;
+  }
+  //Create an object to keep track of the frequencies of the numbers in the first array.
+  let frequencyCounter1 = {};
+  //Create an object to keep track of the frequencies of the number in the second array.
+  let frequencyCounter2 = {};
+  //Create a loop through the first array and if the val isn't in the object add it with a value of 1
+  //Or add one to it's value.
+  for(let val of arr1){
+    frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
+  }
+  //Do the same with the second array and object.
+  for(let val of arr2){
+    frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
+  }
+  //Console log the frequency objects, so you can see it's working.
+  console.log(frequencyCounter1);
+  console.log(frequencyCounter2);
+  //Time to compare the objects:
+  //If the key in frequencyCounter1 is not in frequencyCounter2**2 return false.
+  for(let key in frequencyCounter1){
+    if(!(key ** 2 in frequencyCounter2)) {
+      return false;
+    }
+    //If the key in in frequencyCounter2 is not in frequencyCounter1 return false.
+    if(frequencyCounter2[key ** 2] !== frequencyCounter1[key]){
+      return false;
+    }
+  }
+  return true;
+}
+
+/*Some examples to try:*/
+console.log(same([1, 2, 3], [4, 1, 9])); //true
+console.log(same([1, 2, 3], [1, 9])); //false
+console.log(same([1, 2, 1], [4, 4, 1])); //false, must be same frequency
